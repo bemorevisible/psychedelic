@@ -17,8 +17,8 @@ function dropAcid(containerID = "psychedelic", options = {}) {
     repelBuffer: options.repelBuffer || 20,
     repelDistance: options.repelDistance || options.particleRadius || 800,
     avoidMouse: options.avoidMouse || false,
-    defaultMouseX: (options.width || window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) / 2,
-    defaultMouseY: (options.height || window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight) / 2
+    defaultMouseX: (options.width || container.clientWidth || window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) / 2,
+    defaultMouseY: (options.height || container.clientHeight || window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight) / 2
   }
   
   container.innerHTML = '';

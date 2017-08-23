@@ -1,10 +1,13 @@
 # Psychedelic
 Add a psychedelic background to any div of your choosing.
 
+# Example
+See it in action at [BeMoreVisible.com](http://bemorevisible.com)
+
 # Setup
+Setup is incredibly easy, since psychedelic.js is a standalone vanilla javascript file.  Even if you're already tripping balls, you should have no problem getting up and running with the default settings:
 - Include psychedelic.js in your project
 - Call dropAcid(containerID, [options]) after the DOM is loaded
-- Sit back and relax... Groovey man.
 
 # Options
 
@@ -24,5 +27,4 @@ Add a psychedelic background to any div of your choosing.
 | defaultMouseX | half the width | Where the particles avoid when the mouse is off the canvas |
 | defaultMouseY | half the height | Where the particles avoid when the mouse is off the canvas |
 
-# Cool Beans
-See it in action at [BeMoreVisible.com](http://bemorevisible.com)
+
