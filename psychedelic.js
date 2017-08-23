@@ -1,8 +1,13 @@
 function dropAcid(containerID = "psychedelic", options = {}) {
+  let container = document.getElementById(containerID);
+  if (!container) {
+    console.log('DOM not loaded yet or invalid container ID.');
+    return;
+  }
   let canvas, ctx, mouseX, mouseY, particles = [], particleTemplates = [], settings = {};
   settings = { 
-    height: options.height || window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
-    width: options.width || window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+    height: options.height || container.clientHeight || window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
+    width: options.width || container.clientWidth || window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
     colors: options.colors || ["100,0,0","0,100,0","0,0,100"],
     opacity: options.opacity || 0.15,
     minSpeed: options.minSpeed || 2,
@@ -15,11 +20,7 @@ function dropAcid(containerID = "psychedelic", options = {}) {
     defaultMouseX: (options.width || window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) / 2,
     defaultMouseY: (options.height || window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight) / 2
   }
-  let container = document.getElementById(containerID);
-  if (!container) {
-    console.log('DOM not loaded yet or invalid container ID.');
-    return;
-  }
+  
   container.innerHTML = '';
   canvas = document.createElement("canvas");
   container.appendChild(canvas);
